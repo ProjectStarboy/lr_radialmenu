@@ -11,7 +11,6 @@ interface Props {
 function AppActionHook(props: Props) {
   const dispatch = useDispatch<AppDispatch>();
   const isDev = isEnvBrowser();
-  console.log('AppActionHook', props.action);
   useNuiEvent(props.action, (data) => {
     //dynamicDispatch(action, data);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

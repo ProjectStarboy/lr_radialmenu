@@ -1,16 +1,21 @@
 Config = {}
 Config.EnableModules = {
-  ["Newbie"] = {
+  ["Main"] = {
     enabled = true,
     client = true, -- enable client side
-    priority = 1, -- 1 : init on start | 2 : init on player loaded
-  },
-  ["Test"] = {
-    enabled = true,
-    priority = 2, -- 1 : init on start | 2 : init on player loaded
+    priority = 1,  -- 1 : init on start | 2 : init on player loaded
   },
 }
 Config.Debug = true
-Config.Nui = false
+Config.Nui = true
 Config.Dev = false
-Config.Framework = "esx" -- "qb" | "ProjectStarboy"
+Config.Framework = "standalone" -- "qb" | "ProjectStarboy" | 'standalone'
+Config.ClientLazyLoad = false
+
+Config['Main'] = {
+  color = 0xff4654,
+  background = 0x1f2428,
+  width = 120,
+  radius = 220,
+  disableAnimation = false
+}

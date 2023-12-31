@@ -4,11 +4,25 @@ import App from './App';
 import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { isEnvBrowser } from './utils/misc';
+import { NextUIProvider } from '@nextui-org/react';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root');
+
+if (isEnvBrowser()) {
+  // https://i.imgur.com/iPTAdYV.png - Night time img
+  root!.style.backgroundImage = 'url("https://i.imgur.com/3pzRj9n.png")';
+  root!.style.backgroundSize = 'cover';
+  root!.style.backgroundRepeat = 'no-repeat';
+  root!.style.backgroundPosition = 'center';
+}
+
+ReactDOM.createRoot(root!).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <NextUIProvider>
+        <App />
+      </NextUIProvider>
     </Provider>
   </React.StrictMode>
 );

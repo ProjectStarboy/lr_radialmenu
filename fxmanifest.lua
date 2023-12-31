@@ -20,8 +20,8 @@ games {
 }
 
 files {
-	'web/build/index.html',
-	'web/build/**/*',
+  'web/build/index.html',
+  'web/build/**/*',
 }
 ui_page 'web/build/index.html'
 
@@ -34,13 +34,12 @@ shared_scripts {
 }
 
 
---[[ client_scripts { 
+client_scripts {
   "client/classes/*",
   "client/impl/*"
-} ]]
-server_script { 
+}
+server_script {
   '@oxmysql/lib/MySQL.lua',
   "server/classes/*",
   "server/impl/*"
 }
-
