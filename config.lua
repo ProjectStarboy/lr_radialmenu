@@ -19,3 +19,5 @@ Config['Main'] = {
   radius = 220,
   disableAnimation = false
 }
+
+Config.KeyBind = "Z"

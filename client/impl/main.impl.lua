@@ -31,9 +31,9 @@ function Impl:OnReady()
     data = self.config
   })
   lib.addKeybind({
-    name = 'radialmenu',
+    name = 'lr_radialmenu',
     description = 'press Z to open radial menu',
-    defaultKey = 'Z',
+    defaultKey = Config.KeyBind,
     onPressed = function(this)
       print("asdnasjkdnasjkdnkajsndjk")
       if self.disabled then return end
@@ -46,6 +46,42 @@ function Impl:OnReady()
 end
 
 function Impl:Exports()
+  exports('RegisterRadial', function(...)
+    self:RegisterRadial(...)
+  end)
+  exports('registerRadial', function(...)
+    self:RegisterRadial(...)
+  end)
+  exports('AddRadialMenu', function(...)
+    self:AddRadialMenu(...)
+  end)
+  exports('addRadialItem', function(...)
+    self:AddRadialMenu(...)
+  end)
+  exports('RemoveRadialItem', function(...)
+    self:RemoveRadialItem(...)
+  end)
+  exports('removeRadialItem', function(...)
+    self:RemoveRadialItem(...)
+  end)
+  exports('ClearRadialItems', function(...)
+    self:ClearRadialItems()
+  end)
+  exports('clearRadialItems', function(...)
+    self:ClearRadialItems()
+  end)
+  exports('HideRadial', function(...)
+    self:HideRadial()
+  end)
+  exports('hideRadial', function(...)
+    self:HideRadial()
+  end)
+  exports('DisableRadial', function(...)
+    self:DisableRadial(...)
+  end)
+  exports('disableRadial', function(...)
+    self:DisableRadial(...)
+  end)
 end
 
 function Impl:RegisterRadial(data)
