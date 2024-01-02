@@ -12,6 +12,12 @@
   - background: Background color
 
 # Usage
+#### Build UI
+```
+cd web
+pnpm install
+pnpm run build
+```
 #### You can use it just like ox_lib https://overextended.dev/ox_lib/Modules/Interface/Client/radial
 ```lua
   --Registers a radial sub menu with predefined options.
